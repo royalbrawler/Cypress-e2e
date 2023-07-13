@@ -20,8 +20,6 @@ describe('basics', () => {
     })
     it('Press button', () => {
         cy.get('input#newButtonName').clear().type('new button text 123')
-        cy.get('#updatingButton')
-            .click()
-            .should('have.text', 'new button text 123')
+        cy.get('#updatingButton').click().should('have.text', 'new button text 123')
     })
 })
