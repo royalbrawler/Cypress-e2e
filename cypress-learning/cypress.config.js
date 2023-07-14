@@ -6,5 +6,7 @@ module.exports = defineConfig({
 			// implement node event listeners here
 		},
 		baseUrl: 'http://www.uitestingplayground.com',
+		// pageLoadTimeout: 20000,
+		// defaultCommandTimeout: 16000,
 	},
 })
