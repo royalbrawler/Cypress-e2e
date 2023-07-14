@@ -12,13 +12,16 @@ describe('Retry-ability demo', () => {
             'Data calculated on the client side.'
         )
     })
-    it.only('Progress bar scenario', () => {
+    it('Progress bar 100%', () => {
         cy.visit('/progressbar')
         cy.get('#startButton').click()
-        cy.get('#progressBar', { timeout: 30000 }).should('have.text', '100%')
-
-        // soluton for = Create a test that clicks Start button and then waits for the progress bar to reach 75%.
-        // cy.get('#progressBar', { timeout: 30000 }).should('have.text', '75%')
-        // cy.get('#stopButton').click()
+        cy.get('#progressBar', { timeout: 60000 }).should('have.text', '100%')
+    })
+    it('Clicks Start button and then waits for the progress bar to reach 75%.', () => {
+        cy.visit('/progressbar')
+        cy.get('#startButton').click()
+        cy.get('#progressBar', { timeout: 60000 }).should('have.text', '75%')
+        cy.get('#stopButton').click()
+        cy.get('#progressBar').should('have.text', '75%')
     })
 })
