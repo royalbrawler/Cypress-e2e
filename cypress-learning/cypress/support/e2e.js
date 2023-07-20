@@ -18,6 +18,7 @@ import './commands'
 import './exceptions'
 import 'cypress-real-events' // docs: https://github.com/dmtrKovalenko/cypress-real-events
 require('cypress-xpath')
+require('cy-verify-downloads').addCustomCommand()
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
