@@ -20,6 +20,7 @@ import 'cypress-real-events' // docs: https://github.com/dmtrKovalenko/cypress-r
 require('cypress-xpath')
 require('cy-verify-downloads').addCustomCommand()
 import '@testing-library/cypress/add-commands' // docs: https://testing-library.com/docs/cypress-testing-library/intro/
+import '@4tw/cypress-drag-drop'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
