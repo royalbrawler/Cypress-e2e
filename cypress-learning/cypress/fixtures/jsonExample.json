@@ -1,0 +1,8 @@
+{
+	"prop1": "Property 1 contents",
+	"prop2": "Property 2 contents",
+	"users": [
+		{ "name": "Maria", "pet": "dog" },
+		{ "name": "Hector", "pet": "cat" }
+	]
+}
