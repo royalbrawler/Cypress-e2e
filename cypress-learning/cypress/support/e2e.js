@@ -24,3 +24,11 @@ import '@4tw/cypress-drag-drop'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// GLOBAL Mocha hooks
+beforeEach('Global beforeEach Mocha hook', () => {
+    cy.log('Hello I am a GLOBAL beforeEach HOOK!')
+})
+after(() => {
+    cy.log('GLOBAL after HOOK!')
+})
