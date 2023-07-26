@@ -29,3 +29,7 @@ Cypress.Commands.add('login', (username, password) => {
     cy.get('#password').type(password)
     cy.get('#login').click()
 })
+
+Cypress.Commands.add('parseXlsx', inputFile => {
+    return cy.task('parseXlsx', { filePath: inputFile })
+})
