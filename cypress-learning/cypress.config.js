@@ -57,9 +57,10 @@ module.exports = defineConfig({
 				password: 'password',
 				database: 'cypress_test',
 			},
+			mobileViewportWidthBreakpoint: 700,
 		},
-		viewportHeight: 1000,
-		viewportWidth: 1400,
+		// viewportHeight: 1000,
+		// viewportWidth: 1400,
 		retries: {
 			runMode: 2, // Configure retry attempts for `cypress run`
 			openMode: 0, // Configure retry attempts for `cypress open`
