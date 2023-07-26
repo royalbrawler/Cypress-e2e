@@ -27,9 +27,9 @@ import 'cypress-mochawesome-reporter/register'
 // require('./commands')
 
 // GLOBAL Mocha hooks
-beforeEach('Global beforeEach Mocha hook', () => {
-    cy.log('Hello I am a GLOBAL beforeEach HOOK!')
-})
-after(() => {
-    cy.log('GLOBAL after HOOK!')
-})
+// beforeEach('Global beforeEach Mocha hook', () => {
+//     cy.log('Hello I am a GLOBAL beforeEach HOOK!')
+// })
+// after(() => {
+//     cy.log('GLOBAL after HOOK!')
+// })
