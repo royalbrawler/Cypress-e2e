@@ -21,6 +21,7 @@ require('cypress-xpath')
 require('cy-verify-downloads').addCustomCommand()
 import '@testing-library/cypress/add-commands' // docs: https://testing-library.com/docs/cypress-testing-library/intro/
 import '@4tw/cypress-drag-drop'
+import 'cypress-mochawesome-reporter/register'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

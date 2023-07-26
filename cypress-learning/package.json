@@ -8,6 +8,7 @@
 		"cy:openfast": "cypress open --e2e --browser chrome",
 		"cy:openfastWithConfig": "cypress open --e2e --browser chrome --config baseUrl=http://www.uitestingplayground.com --env demoVar=Hello_How_Are_You",
 		"cy:run": "cypress run",
+		"cy:runNoRecording": "cypress run --config video=false,screenshotOnRunFailure=false --browser chrome --spec cypress/e2e/13*",
 		"format-code": "npx prettier . --write",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -18,6 +19,7 @@
 		"@testing-library/cypress": "^9.0.0",
 		"cy-verify-downloads": "^0.1.15",
 		"cypress": "^12.17.0",
+		"cypress-mochawesome-reporter": "^3.5.1",
 		"cypress-real-events": "^1.8.1",
 		"cypress-xpath": "^2.0.1",
 		"prettier": "^3.0.0"
