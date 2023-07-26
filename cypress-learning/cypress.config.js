@@ -6,6 +6,8 @@ const fs = require('node:fs')
 const path = require('node:path')
 // mySQL
 const mysql = require('mysql')
+// Faker.js
+const { faker } = require('@faker-js/faker')
 
 module.exports = defineConfig({
 	reporter: 'cypress-mochawesome-reporter',
@@ -40,6 +42,22 @@ module.exports = defineConfig({
 			on('task', {
 				queryDb: query => {
 					return queryTestDb(query, config)
+				},
+			})
+			// Faker.js
+			on('task', {
+				freshUser() {
+					let user = {
+						// userId: faker.datatype.uuid(),
+						username: faker.internet.userName(),
+						email: faker.internet.email(),
+						// avatar: faker.image.avatar(),
+						password: faker.internet.password(),
+						// birthdate: faker.date.birthdate(),
+						registeredAt: faker.date.past(),
+						vehicle: faker.vehicle.vehicle(),
+					}
+					return user
 				},
 			})
 		},
