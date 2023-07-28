@@ -8,7 +8,8 @@
 		"cy:openfast": "cypress open --e2e --browser chrome",
 		"cy:openfastWithConfig": "cypress open --e2e --browser chrome --config baseUrl=http://www.uitestingplayground.com --env demoVar=Hello_How_Are_You",
 		"cy:run": "cypress run",
-		"cy:runNoRecording": "cypress run --config video=false,screenshotOnRunFailure=false --browser chrome --spec cypress/e2e/13*",
+		"cy:runNoRecording": "cypress run --config video=false,screenshotOnRunFailure=false --browser chrome --spec cypress/e2e/3-*",
+		"_SAMPLE_cypress-dashboard-parallel": "npx cypress run --record --key <!CYPRESS_RECORD_KEY!> --config projectId=<!CYPRESS_DASHBOARD_PROJECTID!> --parallel --browser chrome",
 		"format-code": "npx prettier . --write",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

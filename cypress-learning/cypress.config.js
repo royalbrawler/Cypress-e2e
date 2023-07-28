@@ -10,6 +10,9 @@ const mysql = require('mysql')
 const { faker } = require('@faker-js/faker')
 
 module.exports = defineConfig({
+	// -- (Cypress Dashboard project id) 
+	// projectId: "asdasd123", // |OR| set in command line --config projectId=<!CYPRESS_DASHBOARD_PROJECTID!>
+	// --
 	reporter: 'cypress-mochawesome-reporter',
 	reporterOptions: {
 		charts: true,
