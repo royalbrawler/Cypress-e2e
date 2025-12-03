@@ -1,6 +1,7 @@
 # Cypress<sup>.io</sup>
 
 [![Cypress Basic Tests](https://github.com/royalbrawler/cypress-learning/actions/workflows/basic.yml/badge.svg)](https://github.com/royalbrawler/cypress-learning/actions/workflows/basic.yml)
+[![Cypress Select Tests](https://github.com/royalbrawler/cypress-learning/actions/workflows/trigger.yml/badge.svg)](https://github.com/royalbrawler/cypress-learning/actions/workflows/trigger.yml)
 
 Learning Cypress e2e testing. Examples and code snippets.
 
