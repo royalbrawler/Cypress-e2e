@@ -1,7 +1,8 @@
 # Cypress<sup>.io</sup>
 
-[![Cypress Basic Tests](https://github.com/royalbrawler/cypress-learning/actions/workflows/basic.yml/badge.svg)](https://github.com/royalbrawler/cypress-learning/actions/workflows/basic.yml)
-[![Cypress Select Tests](https://github.com/royalbrawler/cypress-learning/actions/workflows/trigger.yml/badge.svg)](https://github.com/royalbrawler/cypress-learning/actions/workflows/trigger.yml)
+[![Cypress Basic Tests](https://github.com/royalbrawler/cypress-learning/actions/workflows/basic.yml/badge.svg)](https://github.com/royalbrawler/cypress-learning/actions/workflows/basic.yml)\
+[![Cypress Select Tests](https://github.com/royalbrawler/cypress-learning/actions/workflows/trigger.yml/badge.svg)](https://github.com/royalbrawler/cypress-learning/actions/workflows/trigger.yml)\
+[![Cypress Tests (Realworld App)](https://github.com/royalbrawler/Cypress-e2e/actions/workflows/cypress-tests-nextjsapp.yml/badge.svg)](https://github.com/royalbrawler/Cypress-e2e/actions/workflows/cypress-tests-nextjsapp.yml)\
 
 Learning Cypress e2e testing. Examples and code snippets.
 
