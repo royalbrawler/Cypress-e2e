@@ -16,24 +16,18 @@ jobs:
         working-directory: ./cypress-realworld-testing-course-app
         run: npm ci
 
-      # Start the Next.js app
+      # Start Next.js app
       - name: Start app
         working-directory: ./cypress-realworld-testing-course-app
         run: npm run dev &
-        
-      # Wait for it to be ready
+
+      # Wait until it's reachable
       - name: Wait for app
         run: npx wait-on http://localhost:3000
-
-      # Install Cypress dependencies (from same folder)
-      - name: Install Cypress
-        working-directory: ./cypress-realworld-testing-course-app
-        run: npm ci
 
       # Run Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
           working-directory: ./cypress-realworld-testing-course-app
-          start: false  # we already started the server manually
           browser: chrome
