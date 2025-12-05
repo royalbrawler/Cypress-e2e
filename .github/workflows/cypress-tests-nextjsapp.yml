@@ -11,19 +11,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
       # Install app dependencies
       - name: Install dependencies
         working-directory: ./cypress-realworld-testing-course-app
         run: npm ci
 
-      # Start Next.js app
+      # Build Next.js app for production
+      - name: Build app
+        working-directory: ./cypress-realworld-testing-course-app
+        run: npm run build
+
+      # Start Next.js production server in the background (bind to all interfaces)
       - name: Start app
         working-directory: ./cypress-realworld-testing-course-app
-        run: npm run dev &
+        # Use next start flags to bind host and port explicitly and background the process
+        run: npm run start -- -p 3000 -H 0.0.0.0 &
 
       # Wait until it's reachable
       - name: Wait for app
-        run: npx wait-on http://localhost:3000
+        run: npx wait-on http://localhost:3000 --timeout 60000
 
       # Run Cypress tests
       - name: Cypress run
