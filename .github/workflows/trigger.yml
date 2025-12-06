@@ -1,4 +1,4 @@
-name: CI (*Runs selected tests)
+name: CI (*Run selected tests)
 on:
   workflow_dispatch:
     inputs:
@@ -40,7 +40,7 @@ jobs:
         with:
           working-directory: ./cypress-learning
           browser: chrome
-          spec: ${{ github.event.inputs.specs }}
+          spec: '${{ github.event.inputs.specs }}'
           tag: Trigger specs
           group: Selected specs
           record: true
