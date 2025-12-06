@@ -1,25 +1,40 @@
-name: Trigger specs
-
+name: CI (*Runs selected tests)
 on:
   workflow_dispatch:
     inputs:
       specs:
         description: Comma-separates spec filenames without spaces
         required: true
-
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-
+    # Start MySQL with the SAME creds Cypress expects
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: cypress_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -ppassword"
+          --health-interval=5s
+          --health-timeout=2s
+          --health-retries=10
     strategy:
       fail-fast: false
       matrix:
         containers: [1, 2]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
+      - name: Install MySQL client
+        run: sudo apt-get install -y mysql-client
+      - name: Load SQL file (optional)
+        if: ${{ matrix.containers == 1 }}
+        run: |
+          mysql -h 127.0.0.1 -P 3306 -u root -ppassword cypress_test < cypress-learning/db/init.sql || true
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
